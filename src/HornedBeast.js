@@ -30,7 +30,7 @@ class HornedBeast extends React.Component {
                 <Card.Img src={beast.image_url} alt={beast.name} style={imageStyle} />
                 <Card.Text>{beast.description}</Card.Text>
                 <Card.Footer>
-                  <Button onClick={this.incrementClick}>Click Counter</Button><p>{this.state.votes} Likes</p>
+                  <Button onClick={this.incrementClick}>Click Counter</Button><p>{this.state.clicks} Likes</p>
                 </Card.Footer>
               </Card.Body>
             )) : ''};
