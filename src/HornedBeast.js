@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
-import {Card, Button, CardColumns} from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
+import SelectedBeast from './SelectedBeast.js'
 
 
 
@@ -8,34 +9,44 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0,
+      showModal: false,
+      clicks: 0
     }
   }
+  toggleModal = () => {
+    this.setState({
+      showModal: !this.state.showModal
+    })
+  }
+  closeModal = () => {
+    this.setState({ 
+      showModal: false 
+    })
+  }
+
   incrementClick = () => {
     this.setState({
       clicks: this.state.clicks + 1
     });
   }
   render() {
-    let imageStyle = {
-      maxWidth: 250
-    }
     return (
       <>
-        <Card>
-          <CardColumns>
-            {this.props.beast ? this.props.beast.map(beast => (
-              <Card.Body>
-                <Card.Title>{beast.title}</Card.Title>
-                <Card.Img src={beast.image_url} alt={beast.name} style={imageStyle} />
-                <Card.Text>{beast.description}</Card.Text>
-                <Card.Footer>
-                  <Button onClick={() => this.incrementClick(beast[i])}>Click Counter</Button><p>{this.state.clicks} Likes</p>
-                </Card.Footer>
-              </Card.Body>
-            )) : ''};
-          </CardColumns>
+        <Card style={{ width: '18rem' }}>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Img src={this.props.src} alt={this.props.alt} title={this.props.title} />
+          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Text>{`This has ${this.state.count} likes`}</Card.Text>
+    <Button onClick={this.incrementClick} >Like Me!{this.state.clicks === 0 ? '' : this.state.clicks}</Button>
+          <Button onClick={this.toggleModal} >Close-Up!</Button>
         </Card>
+          <SelectedBeast
+            modalNow={this.state.showModal}
+            closeModal={this.closeModal}
+            title={this.props.title}
+            src={this.props.src}
+            description={this.props.description}
+          />
       </>
     );
   }

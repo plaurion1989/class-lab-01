@@ -6,19 +6,19 @@ import Main from './Main'
 import data from './Data/data.json'
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
-    jsonData : data
-      
+      importData: data,
+      count:0
     }
-
   }
+  
   render() {
     return (
       <>
         <Header />
-        <Main importData = {this.state.jsonData} />
+        <Main importData = {this.state.importData} />
         <Footer />
       </>
     );
