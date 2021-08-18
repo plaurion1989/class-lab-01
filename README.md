@@ -43,15 +43,16 @@ Actual time needed to complete: 45 minutes
 
 ## Lab-03
 
-Number and name of feature: ________________________________
+Number and name of feature: 
+1. Display Modal
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 1330
 
-Finish time: _____
+Finish time: 1500
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour 30 minutes
 
 
 ## Lab-04
