@@ -34,11 +34,11 @@ class HornedBeast extends React.Component {
       <>
         <Card style={{ width: '18rem' }}>
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Img src={this.props.src} alt={this.props.alt} title={this.props.title} />
+          <Card.Img src={this.props.src} alt={this.props.alt} title={this.props.title} onClick={this.toggleModal}/>
           <Card.Text>{this.props.description}</Card.Text>
-          <Card.Text>{`This has ${this.state.count} likes`}</Card.Text>
-    <Button onClick={this.incrementClick} >Like Me!{this.state.clicks === 0 ? '' : this.state.clicks}</Button>
-          <Button onClick={this.toggleModal} >Close-Up!</Button>
+          <Card.Text>{`This has ${this.state.clicks} likes`}</Card.Text>
+    <Button onClick={this.incrementClick} >Like Me!<span>  </span>{this.state.clicks === 0 ? '' : this.state.clicks}</Button>
+          {/* <Button onClick={this.toggleModal} >Close-Up!</Button> */}
         </Card>
           <SelectedBeast
             modalNow={this.state.showModal}

@@ -47,6 +47,8 @@ class Main extends React.Component {
             <option>0</option>
             <option>1</option>
             <option>2</option>
+            <option>3</option>
+            <option>100</option>
           </Form.Control>
         </Form>
         </Card>
