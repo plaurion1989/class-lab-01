@@ -57,12 +57,13 @@ Actual time needed to complete: 1 hour 30 minutes
 
 ## Lab-04
 
-Number and name of feature: ________________________________
+Number and name of feature: 
+1. Filter by Horns
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 11:00
 
-Finish time: _____
+Finish time: 11:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30 minutes
